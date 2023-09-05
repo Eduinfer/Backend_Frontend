@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Producto",
+    "dateExported": "2023-09-04T22:38:07.565Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "27ea91a5-402f-4891-84ca-2fdcbef10378",
+            "colId": "5b4c2e2b-1f5f-4c66-9115-a1b2991ba8ad",
+            "containerId": "",
+            "name": "Agregar Producto ",
+            "url": "http://localhost:3000/Producto",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-02T21:56:33.690Z",
+            "modified": "2023-09-03T03:22:04.929Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc_prod\": \"papel\",\n  \"tipo_prod\": 4, \n  \"valor_prod\": 16000, \n  \"estado_prod\": true\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ad6d3c2e-8139-4b96-ad11-60bec6611b60",
+            "colId": "5b4c2e2b-1f5f-4c66-9115-a1b2991ba8ad",
+            "containerId": "",
+            "name": "Consultar Producto",
+            "url": "http://localhost:3000/Producto",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-09-02T21:52:20.552Z",
+            "modified": "2023-09-03T01:14:58.678Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ceb42f5f-9f10-4d9a-9af6-a426ca51b0b6",
+            "colId": "5b4c2e2b-1f5f-4c66-9115-a1b2991ba8ad",
+            "containerId": "",
+            "name": "Actualizar Producto ",
+            "url": "http://localhost:3000/Producto/28",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-09-02T21:56:38.161Z",
+            "modified": "2023-09-03T01:28:33.338Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc_prod\": \"bola\",\n  \"tipo_prod\": 4, \n  \"valor_prod\": 123000, \n  \"estado_prod\": true\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8b08b8f-45e3-4923-afe9-0e28e23ce26e",
+            "colId": "5b4c2e2b-1f5f-4c66-9115-a1b2991ba8ad",
+            "containerId": "",
+            "name": "Eliminar Producto ",
+            "url": "http://localhost:3000/Producto",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-09-02T21:58:16.544Z",
+            "modified": "2023-09-03T01:28:48.728Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
