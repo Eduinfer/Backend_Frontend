@@ -15,6 +15,39 @@ CREATE TABLE roles
   PRIMARY KEY (id_rol)
 );
 
+CREATE TABLE administrador (
+  tdoc_admin VARCHAR(255) NOT NULL,
+  id_admin INT NOT NULL,
+  nombre_1 VARCHAR(255) NOT NULL,
+  nombre_2 VARCHAR(255),
+  apellido_1 VARCHAR(255) NOT NULL,
+  apellido_2 VARCHAR(255),
+  direccion VARCHAR(255) NOT NULL,
+  rol INT,
+  estado BOOLEAN,
+  pass_admin VARCHAR(255),
+  PRIMARY KEY (tdoc_admin, id_admin),
+  FOREIGN KEY (tdoc_admin) REFERENCES tipo_documento(tdoc),
+  FOREIGN KEY (rol) REFERENCES roles(id_rol)
+);
+
+CREATE TABLE empleado (
+  tdoc_empleado VARCHAR(255) NOT NULL,
+  id_empleado INT NOT NULL,
+  nombre_1 VARCHAR(255) NOT NULL,
+  nombre_2 VARCHAR(255),
+  apellido_1 VARCHAR(255) NOT NULL,
+  apellido_2 VARCHAR(255),
+  direccion VARCHAR(255) NOT NULL,
+  rol INT,
+  estado BOOLEAN,
+  salario DECIMAL(10, 2),  
+  pass_empleado VARCHAR(255),
+  PRIMARY KEY (tdoc_empleado, id_empleado),
+  FOREIGN KEY (tdoc_empleado) REFERENCES tipo_documento(tdoc),
+  FOREIGN KEY (rol) REFERENCES roles(id_rol)
+);
+
 CREATE TABLE tipo_producto (
   id_tipo_prod INT NOT NULL AUTO_INCREMENT,
   tipo_prod VARCHAR(255) NOT NULL,

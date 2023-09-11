@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const bcrypt = require('bcrypt');
+
 
 app.use(express.json());
 app.use(cors());
@@ -10,6 +12,18 @@ app.use('/tipoDocumento', tipoDocumentoRoutes);
 
 const rolesRoutes = require('./routes/roles');
 app.use('/roles', rolesRoutes);
+
+const administradorRoutes = require('./routes/administrador');
+app.use('/administrador', administradorRoutes);
+
+const empleadoRoutes = require('./routes/empleado');
+app.use('/empleado', empleadoRoutes);
+
+const loginRoutes = require('./routes/login');
+app.use('/login', loginRoutes);
+
+const passwordUpdateRoutes = require('./routes/passwordUpdate');
+app.use('/passwordUpdate', passwordUpdateRoutes);
 
 const tipoProductoRoutes = require('./routes/tipoProducto');
 app.use('/tipoProducto', tipoProductoRoutes);
