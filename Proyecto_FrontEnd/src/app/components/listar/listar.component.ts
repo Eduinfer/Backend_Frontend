@@ -11,20 +11,21 @@ import { PersonaConVisibilidad } from 'src/app/models/personas';
 export class ListarComponent implements OnInit {
   
   personas: PersonaConVisibilidad[] = [];
+  persona: any;
 
   constructor(private personaService: PersonaService) {}
 
   ngOnInit(): void {
     this.personaService.getEmpleados().subscribe(
       empleados => {
-        this.personas.push(...Object.values(empleados)); // Convertir objeto en arreglo y luego agregarlo
+        this.personas.push(...Object.values(empleados)); 
       },
       err => console.log(err)
     );
     
     this.personaService.getAdministradores().subscribe(
       administradores => {
-        this.personas.push(...Object.values(administradores)); // Convertir objeto en arreglo y luego agregarlo
+        this.personas.push(...Object.values(administradores)); 
       },
       err => console.log(err)
     );    

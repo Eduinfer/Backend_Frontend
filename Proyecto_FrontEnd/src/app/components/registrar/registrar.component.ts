@@ -9,10 +9,12 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./registrar.component.css']
 })
 export class RegistrarComponent implements OnInit {
+  selectedDocumentType: string = '';
 
-  empleado: Persona = {
-    tdoc: '',
-    id: 0,
+  persona: Persona = {
+    tdoc_admin: '',
+    tdoc_empleado: '',
+    id_admin: 0,
     nombre_1: '',
     nombre_2: '',
     apellido_1: '',
@@ -21,7 +23,8 @@ export class RegistrarComponent implements OnInit {
     rol: 0,
     estado: 0,
     salario: 0,
-    pass: ''
+    pass: '',
+    id_empleado: 0 
   }
 
   constructor(private personaService: PersonaService){
@@ -30,10 +33,21 @@ export class RegistrarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  updateDocumentType() {
+    if (this.persona.rol === 1) {
+      this.persona.tdoc_empleado = this.selectedDocumentType;
+    } else if (this.persona.rol === 2) {
+      this.persona.tdoc_admin = this.selectedDocumentType;
+    }
+  }
+  
   nuevoRegistro() {
-    console.log(this.empleado);
+    console.log(this.persona);
     
   }
+
+
+  
 
 }

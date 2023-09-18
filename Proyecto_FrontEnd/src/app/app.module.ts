@@ -12,6 +12,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 import { PersonaService } from './services/persona.service';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PersonaService } from './services/persona.service';
     ListarComponent,
     NavComponent,
     InicioComponent,
-    MenuComponent
+    MenuComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

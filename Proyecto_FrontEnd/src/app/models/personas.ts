@@ -1,6 +1,8 @@
 export interface Persona {
-    tdoc: string;
-    id: number;
+    tdoc_admin: string;
+    tdoc_empleado: string;
+    id_admin : number;
+    id_empleado : number;
     nombre_1: string;
     nombre_2: string;
     apellido_1: string;

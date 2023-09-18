@@ -4,13 +4,15 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListarComponent } from './components/listar/listar.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "inicio", pathMatch: "full"},
   {path: "inicio", component: InicioComponent},
   {path: "menu", component: MenuComponent},
   {path: "listar", component: ListarComponent},
-  {path: "registrar", component: RegistrarComponent}
+  {path: "registrar", component: RegistrarComponent},
+  {path: "perfil", component: PerfilComponent}
 ];
 
 @NgModule({

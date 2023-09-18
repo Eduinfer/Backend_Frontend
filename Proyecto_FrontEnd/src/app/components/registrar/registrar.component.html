@@ -10,13 +10,13 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="first-name">Primer Nombre:</label>
-                                    <input [(ngModel)]="empleado.nombre_1" type="text" class="form-control" id="first-name" name="first-name" required>
+                                    <input [(ngModel)]="persona.nombre_1" type="text" class="form-control" id="first-name" name="first-name" required>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
                                     <label for="second-name">Segundo Nombre:</label>
-                                    <input [(ngModel)]="empleado.nombre_2" type="text" class="form-control" id="second-name" name="second-name">
+                                    <input [(ngModel)]="persona.nombre_2" type="text" class="form-control" id="second-name" name="second-name">
                                 </div>
                             </div>
                         </div>
@@ -24,36 +24,35 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="last-name">Primer Apellido:</label>
-                                    <input [(ngModel)]="empleado.apellido_1" type="text" class="form-control" id="last-name" name="last-name" required>
+                                    <input [(ngModel)]="persona.apellido_1" type="text" class="form-control" id="last-name" name="last-name" required>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
                                     <label for="second-last-name">Segundo Apellido:</label>
-                                    <input [(ngModel)]="empleado.apellido_2" type="text" class="form-control" id="second-last-name" name="second-last-name">
+                                    <input [(ngModel)]="persona.apellido_2" type="text" class="form-control" id="second-last-name" name="second-last-name">
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="document-type">Tipo de Documento:</label>
-                            <select class="form-control" id="document-type" name="document-type" required>
-                                <option value="" disabled selected>Seleccione el tipo de documento</option>
-                                <option value="Cedula de Ciudadania">CC</option>
-                                <option value="Cedula de Extranjeria">CE</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                            </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="rol-type">Tipo de Rol:</label>
-                            <select class="form-control" id="rol-type" name="rol-type" required>
+                            <select class="form-control" id="rol-type" name="rol-type" required [(ngModel)]="persona.rol" (change)="updateDocumentType()">
                                 <option value="" disabled selected>Seleccione el tipo de rol</option>
-                                <option value="empleado">Empleado</option>
-                                <option value="administrador">Administrador</option>
+                                <option value=1>Empleado</option>
+                                <option value=2>Administrador</option>
                             </select>
                         </div>
                         
+                        <div class="form-group">
+                            <label for="document-type">Tipo de Documento:</label>
+                            <select class="form-control" id="document-type" name="document-type" required [(ngModel)]="selectedDocumentType">
+                                <option value="" disabled selected>Seleccione el tipo de documento</option>
+                                <option value="CC">CC</option>
+                                <option value="CE">CE</option>
+                            </select>
+                        </div>
+                              
 
                         <div class="form-group">
                             <label for="document-number">Número de Documento:</label>
@@ -65,12 +64,12 @@
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="password">Contraseña:</label>
                             <input type="password" class="form-control" id="password" name="password" required>
-                        </div>
+                        </div> -->
 
-                        <button type="submit" class="btn btn-primary btn-block" (click)="nuevoRegistro">Registrar</button>
+                        <button type="submit" class="btn btn-primary btn-block" (click)="nuevoRegistro()">Registrar</button>
                     </form>
                 </div>
             </div>
