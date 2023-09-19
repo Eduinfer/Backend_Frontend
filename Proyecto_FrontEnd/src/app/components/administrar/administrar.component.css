@@ -1,0 +1,41 @@
+.menu-title {
+    color: #333;
+}
+
+.menu-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Establece la altura de las cajas */
+}
+
+.menu-box:hover {
+    background-color: #e5e5e5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin-button {
+    background-color: #000;
+}
+
+.employee-button {
+    background-color: #000;
+}

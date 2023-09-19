@@ -1,0 +1,102 @@
+<app-nav></app-nav>
+<div class="container">
+    <div class="row justify-content-left mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Registro de Usuario</h2><br>
+                    <form method="" #registroForm="ngForm">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first-name">Primer Nombre:</label>
+                                    <input [(ngModel)]="admin.nombre_1" type="text" class="form-control" id="first-name" name="first-name" required>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="second-name">Segundo Nombre:</label>
+                                    <input [(ngModel)]="admin.nombre_2" type="text" class="form-control" id="second-name" name="second-name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="last-name">Primer Apellido:</label>
+                                    <input [(ngModel)]="admin.apellido_1" type="text" class="form-control" id="last-name" name="last-name" required>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="second-last-name">Segundo Apellido:</label>
+                                    <input [(ngModel)]="admin.apellido_2" type="text" class="form-control" id="second-last-name" name="second-last-name">
+                                </div>
+                            </div>
+                        </div>
+                                            
+                        <div class="form-group">
+                            <label for="document-type">Tipo de Documento:</label>
+                            <select class="form-control" id="document-type" name="document-type" required [(ngModel)]="admin.tdoc_admin">
+                                <option value="" disabled selected>Seleccione el tipo de documento</option>
+                                <option value="CC">CC</option>
+                                <option value="TI">TI</option>
+                            </select>
+                        </div>                      
+
+                        <div class="form-group">
+                            <label for="document-number">Número de Documento:</label>
+                            <input [(ngModel)]="admin.id_admin" type="text" class="form-control" id="document-number" name="document-number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Dirección:</label>
+                            <input [(ngModel)]="admin.direccion" type="text" class="form-control" id="address" name="address" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" (click)="nuevoRegistro()" [disabled]="!registroForm.form.valid">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Previsualización</h2>
+                    <div class="table-responsive"> 
+                        <table class="table table-bordered table-striped"> 
+                            <tbody>
+                                <tr>
+                                    <th style="width: 40%;">Nombres</th> 
+                                    <td>{{admin.nombre_1}} {{admin.nombre_2}}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 40%;">Apellidos</th>
+                                    <td>{{admin.apellido_1}} {{admin.apellido_2}}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 40%;">Tipo de Documento</th>
+                                    <td>{{admin.tdoc_admin}}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 40%;">Número de Documento</th>
+                                    <td>{{admin.id_admin === 0 ? '' : admin.id_admin}}</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 40%;">Dirección</th>
+                                    <td>{{admin.direccion}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-4">
+                <button routerLink="/listar-admin" class="btn btn-primary ml-2">Volver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

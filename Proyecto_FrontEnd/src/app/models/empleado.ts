@@ -1,7 +1,5 @@
-export interface Persona {
-    tdoc_admin: string;
+export interface Empleado {
     tdoc_empleado: string;
-    id_admin : number;
     id_empleado : number;
     nombre_1: string;
     nombre_2: string;
@@ -9,11 +7,11 @@ export interface Persona {
     apellido_2: string;
     direccion: string;
     rol: number;
-    estado: number;
+    estado: boolean;
     salario: number;
-    pass: string;
+    pass_empleado: string;
 }
 
-export interface PersonaConVisibilidad extends Persona {
+export interface EmpleadoConVisibilidad extends Empleado {
     mostrarTabla: boolean;
 }
