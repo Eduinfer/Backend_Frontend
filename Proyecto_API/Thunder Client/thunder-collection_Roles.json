@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Roles",
+    "dateExported": "2023-09-05T22:50:27.843Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fd1c6961-ccb3-4d66-b590-6e4072532550",
+            "colId": "9679d104-269b-4662-9706-44a68b0009bb",
+            "containerId": "",
+            "name": "Agregar Rol",
+            "url": "http://localhost:3000/roles",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-05T22:37:57.950Z",
+            "modified": "2023-09-05T22:43:36.333Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc_rol\": \"Administrador\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "980b328a-bb27-40ed-b220-337c827eb029",
+            "colId": "9679d104-269b-4662-9706-44a68b0009bb",
+            "containerId": "",
+            "name": "Consultar Rol ",
+            "url": "http://localhost:3000/roles",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-09-05T22:38:30.033Z",
+            "modified": "2023-09-05T22:43:45.691Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5e9b6bf1-ffdd-4d37-9a1c-bd90ab75371b",
+            "colId": "9679d104-269b-4662-9706-44a68b0009bb",
+            "containerId": "",
+            "name": "Actualizar Rol ",
+            "url": "http://localhost:3000/roles/2",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-09-05T22:38:32.891Z",
+            "modified": "2023-09-05T22:44:36.589Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"desc_rol\": \"Gerente\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1cc196b5-c8f6-4b7d-b85b-f8f3a186210e",
+            "colId": "9679d104-269b-4662-9706-44a68b0009bb",
+            "containerId": "",
+            "name": "Eliminar Rol ",
+            "url": "http://localhost:3000/roles",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-09-05T22:38:36.559Z",
+            "modified": "2023-09-05T22:46:01.335Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

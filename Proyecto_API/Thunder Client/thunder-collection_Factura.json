@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Factura",
+    "dateExported": "2023-09-04T22:38:20.617Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "197d6ed3-82a4-4367-a1e5-1bbda10998af",
+            "colId": "c771d24a-b009-49c2-ad22-302fd3326a57",
+            "containerId": "",
+            "name": "Nueva Factura",
+            "url": "http://localhost:3000/factura",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-03T02:28:59.097Z",
+            "modified": "2023-09-03T03:21:39.566Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fecha_factura\": \"2020-10-02\",\n  \"subtotal\": 15000.00,\n  \"iva\": 12.00,\n  \"total_factura\": 827000.00\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d959a8ec-6aa8-4d07-87bf-4e27ce4b5ddf",
+            "colId": "c771d24a-b009-49c2-ad22-302fd3326a57",
+            "containerId": "",
+            "name": "Consultar Factura ",
+            "url": "http://localhost:3000/factura",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-09-03T02:29:33.418Z",
+            "modified": "2023-09-03T02:36:02.449Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e6c67056-54b9-4706-95f8-59993e132117",
+            "colId": "c771d24a-b009-49c2-ad22-302fd3326a57",
+            "containerId": "",
+            "name": "Actualizar Factura ",
+            "url": "http://localhost:3000/factura/4",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-09-03T02:29:36.368Z",
+            "modified": "2023-09-03T02:40:36.801Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"fecha_factura\": \"2023-09-02\",\r\n  \"subtotal\": 150.00,\r\n  \"iva\": 12.00,\r\n  \"total_factura\": 22000\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6974d31d-75df-4826-8ff5-f93ae7187824",
+            "colId": "c771d24a-b009-49c2-ad22-302fd3326a57",
+            "containerId": "",
+            "name": "Eliminar Factura ",
+            "url": "http://localhost:3000/factura",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-09-03T02:29:38.284Z",
+            "modified": "2023-09-03T02:41:03.023Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

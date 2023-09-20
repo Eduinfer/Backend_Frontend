@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Administrador",
+    "dateExported": "2023-09-11T19:42:16.056Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a27479e5-db56-46b0-a29e-e83f9ad6eaaf",
+            "colId": "a457b762-ae67-4cb2-9ecc-ca1c78419514",
+            "containerId": "",
+            "name": "Agregar Administrador",
+            "url": "http://localhost:3000/administrador",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-10T20:23:15.847Z",
+            "modified": "2023-09-11T16:22:30.785Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tdoc_admin\": \"CC\",\n  \"id_admin\": 1,\n  \"nombre_1\": \"Juan\",\n  \"nombre_2\": \"Carlos\",\n  \"apellido_1\": \"González\",\n  \"apellido_2\": \"Pérez\",\n  \"direccion\": \"Calle 123, Ciudad\",\n  \"rol\": 6,\n  \"estado\": true,\n  \"pass_admin\": \"\"\n}\n\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "14d5c5a5-b365-427c-a172-f570665cc0c0",
+            "colId": "a457b762-ae67-4cb2-9ecc-ca1c78419514",
+            "containerId": "",
+            "name": "Consultar Administrador ",
+            "url": "http://localhost:3000/administrador",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-09-10T20:23:41.009Z",
+            "modified": "2023-09-10T20:40:09.567Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "60aa3d40-94e5-4199-9e08-5a0ee40dd000",
+            "colId": "a457b762-ae67-4cb2-9ecc-ca1c78419514",
+            "containerId": "",
+            "name": "Actualizar Administrador ",
+            "url": "http://localhost:3000/administrador/cc/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-09-10T20:23:44.435Z",
+            "modified": "2023-09-11T15:56:23.348Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre_1\": \"Luis\",\n  \"nombre_2\": \"Carlos\",\n  \"apellido_1\": \"González\",\n  \"apellido_2\": \"Pérez\",\n  \"direccion\": \"Calle 123\",\n  \"rol\": 6,\n  \"estado\": false\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a1feda5a-13c3-4354-bb8c-811d3dceb064",
+            "colId": "a457b762-ae67-4cb2-9ecc-ca1c78419514",
+            "containerId": "",
+            "name": "Eliminar Administrador ",
+            "url": "http://localhost:3000/administrador",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-09-10T20:23:46.523Z",
+            "modified": "2023-09-10T20:52:02.938Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Empleado",
+    "dateExported": "2023-09-11T19:42:39.358Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d9dc86a3-4fa9-41ae-ad2a-8ff9253cf561",
+            "colId": "d22dd78b-cf06-4c13-add5-e0e73e019fbd",
+            "containerId": "",
+            "name": "Agregar Empleado",
+            "url": "http://localhost:3000/empleado",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-10T21:08:56.332Z",
+            "modified": "2023-09-11T16:45:27.340Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tdoc_empleado\": \"TI\", \n  \"id_empleado\": 3, \n  \"nombre_1\": \"Andres\",\n  \"nombre_2\": \"\",\n  \"apellido_1\": \"Rodriguez\",\n  \"apellido_2\": \"\",\n  \"direccion\": \"Calle 123, Ciudad\",\n  \"rol\": 7,  \n  \"estado\": false, \n  \"salario\": 7000.00, \n  \"pass_empleado\": \"\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1bfbbc71-10ae-43cb-98d1-0df8db2c5317",
+            "colId": "d22dd78b-cf06-4c13-add5-e0e73e019fbd",
+            "containerId": "",
+            "name": "Consultar Empleado ",
+            "url": "http://localhost:3000/empleado",
+            "method": "GET",
+            "sortNum": 12500,
+            "created": "2023-09-10T21:09:14.367Z",
+            "modified": "2023-09-10T21:26:25.472Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "61895f0b-d268-4c47-bb27-1754a4d35179",
+            "colId": "d22dd78b-cf06-4c13-add5-e0e73e019fbd",
+            "containerId": "",
+            "name": "Actualizar Empleado ",
+            "url": "http://localhost:3000/empleado/ti/2",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-09-10T21:09:10.643Z",
+            "modified": "2023-09-11T16:44:00.182Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre_1\": \"Andres\",\n  \"nombre_2\": \"\",\n  \"apellido_1\": \"Rodriguez\",\n  \"apellido_2\": \"Carbajal\",\n  \"direccion\": \"Calle 123, Ciudad\",\n  \"rol\": 7,  \n  \"estado\": true, \n  \"salario\": 8000.00\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dde117a2-a21a-48b6-bf6c-ed16fc07798e",
+            "colId": "d22dd78b-cf06-4c13-add5-e0e73e019fbd",
+            "containerId": "",
+            "name": "Eliminar Empleado ",
+            "url": "http://localhost:3000/empleado",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-09-10T21:09:03.007Z",
+            "modified": "2023-09-11T16:45:53.468Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

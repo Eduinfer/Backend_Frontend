@@ -1,0 +1,60 @@
+<app-nav></app-nav>
+
+<div class="container mt-4" style="overflow-y: auto; max-height: 650px;">
+    <br>
+    <h5 class="text-center py-2 bg-primary text-white">Administradores</h5>
+    <div class="row">
+        <ng-container *ngFor="let admin of administradores">
+            <div class="col-md-12"><br>
+                <div class="card bg-secondary" *ngIf="admin.mostrarTabla"> <!-- Agregamos *ngIf para mostrar la tarjeta solo cuando la tabla está abierta -->
+                    <div class="card-header bg-dark text-white text-center" style="cursor: pointer;" (click)="toggleTabla(admin)">
+                        <h5 class="card-title">Perfil de {{admin.nombre_1}}</h5>
+                    </div>
+                    <div class="card-body text-left">
+                        <div class="table-responsive">
+                            <table class="table table-bordered border-dotted table-sm table-striped table-hover custom-table">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-dark">Nombre:</th>
+                                        <td>{{admin.nombre_1}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-dark">Segundo Nombre:</th>
+                                        <td>{{admin.nombre_2}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-dark">Apellido:</th>
+                                        <td>{{admin.apellido_1}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-dark">Segundo Apellido:</th>
+                                        <td>{{admin.apellido_2}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-dark">Tipo de documento:</th>
+                                        <td>{{admin.tdoc_admin}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-dark">ID:</th>
+                                        <td>{{admin.id_admin}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button class="btn btn-danger" (click)="eliminarAdmin(admin.tdoc_admin, admin.id_admin)">Borrar</button>
+                                <button class="btn btn-primary ml-2" [routerLink]="['/editar/admin/',admin.tdoc_admin, admin.id_admin]">Actualizar</button>
+                            </div>                            
+                        </div>
+                    </div>
+                </div><br>
+                <div class="card-header bg-dark text-white text-center" style="cursor: pointer;" (click)="toggleTabla(admin)" *ngIf="!admin.mostrarTabla"> <!-- Agregamos *ngIf para mostrar la tarjeta solo cuando la tabla está cerrada -->
+                    <h5 class="card-title">Perfil de {{admin.nombre_1}}</h5>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="container text-center mt-4">
+    <button routerLink="/registrar-admin" class="btn btn-primary ml-2">Registrar Administrador</button>
+</div><br>
