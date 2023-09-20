@@ -54,7 +54,8 @@
                             <input [(ngModel)]="admin.direccion" type="text" class="form-control" id="address" name="address" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block" (click)="nuevoRegistro()" [disabled]="!registroForm.form.valid">Registrar</button>
+                        <button type="submit" class="btn btn-primary btn-block" (click)="edit ? actualizarAdmin() : nuevoRegistro()" [disabled]="!registroForm.form.valid">Registrar</button>
+
                     </form>
                 </div>
             </div>

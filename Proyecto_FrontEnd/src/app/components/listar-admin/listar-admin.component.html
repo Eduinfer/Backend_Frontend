@@ -42,7 +42,7 @@
                             </table>
                             <div class="text-center">
                                 <button class="btn btn-danger" (click)="eliminarAdmin(admin.tdoc_admin, admin.id_admin)">Borrar</button>
-                                <button class="btn btn-primary ml-2">Actualizar</button>
+                                <button class="btn btn-primary ml-2" [routerLink]="['/editar/admin/',admin.tdoc_admin, admin.id_admin]">Actualizar</button>
                             </div>                            
                         </div>
                     </div>

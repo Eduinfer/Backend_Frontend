@@ -1,4 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 import { AdministradorService } from 'src/app/services/administrador.service';
@@ -13,7 +14,7 @@ export class ListarAdminComponent implements OnInit {
 
   administradores: AdministradorConVisibilidad[] = [];
 
-  constructor(private administradorService: AdministradorService,) {}
+  constructor(private administradorService: AdministradorService, private router: Router) {}
 
   ngOnInit(): void {
    this.getAdministrador();
@@ -32,15 +33,16 @@ export class ListarAdminComponent implements OnInit {
     administrador.mostrarTabla = !administrador.mostrarTabla;
   }
 
-  eliminarAdmin(tdoc: string, id: number){
+  eliminarAdmin(tdoc: string | undefined, id: number | undefined){
     this.administradorService.eliminarAdministrador(tdoc, id).subscribe(
         res => {
             console.log(res);
+            this.getAdministrador()
         },
         err => {
             console.log(err);
         }
     );
-}
+  }
 }
 

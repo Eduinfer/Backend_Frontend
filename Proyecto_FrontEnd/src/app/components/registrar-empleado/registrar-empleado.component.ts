@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Empleado } from 'src/app/models/empleado';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 
@@ -22,7 +24,7 @@ export class RegistrarEmpleadoComponent {
     salario: 0
   }
 
-  constructor(private empleadoService: EmpleadoService) {}
+  constructor(private empleadoService: EmpleadoService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -31,6 +33,7 @@ export class RegistrarEmpleadoComponent {
       .subscribe(
         res =>{
           console.log(res);
+          this.router.navigate(['/listar-empleado']);
           
         },
         err => console.error(err)

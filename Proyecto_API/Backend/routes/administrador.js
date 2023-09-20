@@ -121,7 +121,7 @@ router.put('/:tdoc_admin/:id_admin', (req, res) => {
   const { tdoc_admin, id_admin } = req.params;
   const { nombre_1, nombre_2, apellido_1, apellido_2, direccion, rol, estado } = req.body;
 
-  if (!nombre_1 || !apellido_1 || !direccion || typeof estado !== 'boolean') {
+  if (!nombre_1 || !apellido_1 || !direccion) {
     return res.status(400).json({ error: 'Los campos obligatorios deben estar presentes y el campo estado debe ser booleano' });
   }
 

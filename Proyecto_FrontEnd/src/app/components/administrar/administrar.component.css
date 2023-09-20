@@ -1,41 +1,66 @@
-.menu-title {
-    color: #333;
-}
-
 .menu-box {
-    background-color: #fff;
+    background-color: #f8f9fa;
     padding: 20px;
-    border: 1px solid #ddd;
-    text-align: center;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    height: 100%; /* Establece la altura de las cajas */
-}
-
-.menu-box:hover {
-    background-color: #e5e5e5;
-    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    height: 200px;
     cursor: pointer;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px; 
+  }
 
-.profile-buttons {
+  .menu-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .menu-title {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 20px;
-}
+    text-transform: uppercase;
+    position: relative;
+  }
 
-.profile-button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
+  h2::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background-color: #6c757d;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
 
-.admin-button {
-    background-color: #000;
-}
-
-.employee-button {
-    background-color: #000;
-}
+  h2::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #6c757d;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  .menu-box{
+    margin-top: 40px;
+    height: 400px;
+    
+  }
+  img{
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+  }

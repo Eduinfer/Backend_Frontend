@@ -16,11 +16,11 @@ export class AdministradorService {
     return this.http.get(`${this.API_URI}/administrador`);
   }
 
-  getAdministrador(id: string){
-    return this.http.get(`${this.API_URI}/administrador/${id}`);
+  getAdministrador(tdoc:string, id: number){
+    return this.http.get(`${this.API_URI}/administrador/${tdoc}/${id}`);
   }
 
-  eliminarAdministrador(tip_doc: string, id: number){
+  eliminarAdministrador(tip_doc: string | undefined, id: number | undefined){
     return this.http.delete(`${this.API_URI}/administrador/${tip_doc}/${id}`);
   }
 
@@ -28,7 +28,7 @@ export class AdministradorService {
     return this.http.post(`${this.API_URI}/administrador`, administrador);
   }
 
-  actualizarAdministrador(id: string, empleadoActualizado: Administrador){
-    return this.http.put(`${this.API_URI}/administrador/${id}`, empleadoActualizado)
+  actualizarAdministrador(tdoc: string | undefined,id: number | undefined, empleadoActualizado: Administrador){
+    return this.http.put(`${this.API_URI}/administrador/${tdoc}/${id}`, empleadoActualizado)
   }
 }

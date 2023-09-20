@@ -20,7 +20,9 @@ const routes: Routes = [
   {path: "registrar-empleado", component: RegistrarEmpleadoComponent},
   {path: "perfil", component: PerfilComponent},
   {path: "administrar", component: AdministrarComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path: "editar/admin/:tdoc/:id", component: RegistrarAdminComponent},
+  {path: "editar/empleado/:id", component: RegistrarEmpleadoComponent}
 ];
 
 @NgModule({
