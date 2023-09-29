@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Eliminar Usuario</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <!-- Mostrar mensajes de éxito y error aquí si es necesario -->
+      <div *ngIf="mensajeExito" class="alert alert-success text-center">{{ mensajeExito }}</div>
+      <div *ngIf="mensajeError" class="alert alert-danger text-center">{{ mensajeError }}</div>
+
+      <!-- Mostrar detalles del usuario que se eliminará -->
+      <p class="text-center">¿Estás seguro de que deseas eliminar este usuario?</p>
+      <button type="button" class="btn btn-danger btn-block" (click)="eliminarUsuario()">Confirmar Eliminación</button>
+    </div>
+  </div>
+</div>
+
+  

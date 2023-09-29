@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Tipo-Producto",
+    "dateExported": "2023-09-04T22:37:36.927Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ab44e984-1c54-472d-8f5f-212b35bab2ae",
+            "colId": "315797bc-3741-47a9-9890-61143bfc67e8",
+            "containerId": "",
+            "name": "Agregar Tipo Producto",
+            "url": "http://localhost:3000/tipoProducto",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-02T21:20:34.576Z",
+            "modified": "2023-09-03T01:11:46.370Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipo_prod\": \"Papel\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a16eb4ce-d1e3-4f02-9fff-9bbf44521ef8",
+            "colId": "315797bc-3741-47a9-9890-61143bfc67e8",
+            "containerId": "",
+            "name": "Consultar Tipo Producto ",
+            "url": "http://localhost:3000/tipoProducto",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-09-02T21:21:25.714Z",
+            "modified": "2023-09-03T01:13:31.530Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2685bd78-0908-4ec5-a269-f86a6e40261c",
+            "colId": "315797bc-3741-47a9-9890-61143bfc67e8",
+            "containerId": "",
+            "name": "Actualizar Tipo Producto  ",
+            "url": "http://localhost:3000/tipoProducto/3",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-09-02T21:22:50.521Z",
+            "modified": "2023-09-03T01:12:33.636Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tipo_prod\": \"electro\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a1615e66-f113-471e-92cc-d9afaa09371b",
+            "colId": "315797bc-3741-47a9-9890-61143bfc67e8",
+            "containerId": "",
+            "name": "Eliminar Tipo Producto ",
+            "url": "http://localhost:3000/tipoProducto/3",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-09-02T21:24:49.918Z",
+            "modified": "2023-09-03T01:13:00.468Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

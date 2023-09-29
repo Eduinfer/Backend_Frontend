@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Factura-Producto",
+    "dateExported": "2023-09-04T22:38:26.571Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "be7d57ef-181c-4211-92cd-f36ef86939c2",
+            "colId": "41492f81-5afb-4417-8df1-fffa4d58dbc7",
+            "containerId": "",
+            "name": "Nueva Factura-Producto",
+            "url": "http://localhost:3000/factura-producto",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-03T03:01:50.201Z",
+            "modified": "2023-09-04T21:59:51.269Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"n_factura\": 6, \n  \"id_prod\": 30,  \n  \"cant_prod\": 5, \n  \"valor_prod_cant\": 225000\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae193158-406c-4fe8-bc6d-eeeca0ae614b",
+            "colId": "41492f81-5afb-4417-8df1-fffa4d58dbc7",
+            "containerId": "",
+            "name": "Consultar Factura-Producto",
+            "url": "http://localhost:3000/factura-producto",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-09-03T03:02:27.542Z",
+            "modified": "2023-09-03T03:30:01.271Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fb1e24e5-3773-4520-bb91-083a9d09a2ec",
+            "colId": "41492f81-5afb-4417-8df1-fffa4d58dbc7",
+            "containerId": "",
+            "name": "Actualizar Factura-Producto",
+            "url": "http://localhost:3000/factura-producto/6/30",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-09-03T03:02:29.442Z",
+            "modified": "2023-09-04T22:25:50.288Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"n_factura\": 6, \n  \"id_prod\": 30,  \n  \"cant_prod\": 2, \n  \"valor_prod_cant\": 5000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "61674562-4eda-4f5a-a98a-8050fec5c083",
+            "colId": "41492f81-5afb-4417-8df1-fffa4d58dbc7",
+            "containerId": "",
+            "name": "Eliminar Factura-Producto",
+            "url": "http://localhost:3000/factura-producto/6/30",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-09-03T03:02:31.628Z",
+            "modified": "2023-09-04T22:26:11.792Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

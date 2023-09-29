@@ -1,0 +1,70 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Registro de Usuario</h2>
+          <div *ngIf="mensajeExito" class="alert alert-success">{{ mensajeExito }}</div>
+          <div *ngIf="mensajeError" class="alert alert-danger">{{ mensajeError }}</div>
+
+          <!-- Mostrar el password generado si está disponible -->
+          <div *ngIf="passwordGenerado" class="alert alert-info">
+            Password Generado: {{ passwordGenerado }}
+          </div>
+
+          <form (ngSubmit)="registrarUsuario()">
+            <div class="form-group">
+              <label for="tdoc_user">Tipo de Documento:</label>
+              <select class="form-control" id="tdoc_user" name="tdoc_user" [(ngModel)]="nuevoUsuario.tdoc_user" required>
+                <option *ngFor="let tipoDoc of tiposDocumento" [value]="tipoDoc.tdoc">{{ tipoDoc.desc_tdoc }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="id_user">Número de Identificación:</label>
+              <input type="number" class="form-control" id="id_user" name="id_user" [(ngModel)]="nuevoUsuario.id_user" required>
+            </div>
+            <div class="form-group">
+              <label for="nombre_1">Primer Nombre:</label>
+              <input type="text" class="form-control" id="nombre_1" name="nombre_1" [(ngModel)]="nuevoUsuario.nombre_1" required>
+            </div>
+            <div class="form-group">
+              <label for="nombre_2">Segundo Nombre:</label>
+              <input type="text" class="form-control" id="nombre_2" name="nombre_2" [(ngModel)]="nuevoUsuario.nombre_2">
+            </div>
+            <div class="form-group">
+              <label for="apellido_1">Primer Apellido:</label>
+              <input type="text" class="form-control" id="apellido_1" name="apellido_1" [(ngModel)]="nuevoUsuario.apellido_1" required>
+            </div>
+            <div class="form-group">
+              <label for="apellido_2">Segundo Apellido:</label>
+              <input type="text" class="form-control" id="apellido_2" name="apellido_2" [(ngModel)]="nuevoUsuario.apellido_2">
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección:</label>
+              <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="nuevoUsuario.direccion" required>
+            </div>
+            <div class="form-group">
+              <label for="rol">Rol:</label>
+              <select class="form-control" id="rol" name="rol" [(ngModel)]="nuevoUsuario.rol" required>
+                <option *ngFor="let rol of roles" [value]="rol.id_rol">{{ rol.desc_rol }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="estado">Estado:</label>
+              <select class="form-control" id="estado" name="estado" [(ngModel)]="nuevoUsuario.estado" required>
+                <option [ngValue]="true" [selected]="nuevoUsuario.estado === true">Activo</option>
+                <option [ngValue]="false" [selected]="nuevoUsuario.estado === false">Inactivo</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="!formularioValido()">Registrar Usuario</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
